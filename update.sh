@@ -26,9 +26,9 @@ elif [ $EXIT_CODE -eq 0 ]; then
     git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
     git add .
-    git commit -m"Automated update"
+    git commit -m "Automated update"
     git push
-else 
+else
     echo "This is an unexpected error"
 
     exit $EXIT_CODE
