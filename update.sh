@@ -27,7 +27,7 @@ elif [ $EXIT_CODE -eq 0 ]; then
 
     git add .
     git commit -m "Automated update"
-    git push
+    git push "https://x-access-token:${GH_ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
 else
     echo "This is an unexpected error"
 
