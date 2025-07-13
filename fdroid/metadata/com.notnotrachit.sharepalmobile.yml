@@ -1,0 +1,12 @@
+AuthorName: notnotrachit
+Categories:
+    - Money
+CurrentVersion: 1.6.1
+CurrentVersionCode: 1
+Description: |
+    Sharepal is a simple group expense splitting app that allows users to easily split expenses among group members.
+IssueTracker: ""
+Name: Sharepal
+SourceCode: https://github.com/notnotrachit/sharepal_app
+Summary: ""
+WebSite: ""

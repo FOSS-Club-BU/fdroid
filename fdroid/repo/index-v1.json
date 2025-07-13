@@ -1,1 +1,110 @@
-{"repo": {"timestamp": 1752435914000, "version": 20002, "name": "NotNotRachit's F-Droid Repo", "icon": "icon.png", "address": "https://raw.githubusercontent.com/notnotrachit/fdroid/main/fdroid/repo", "description": "NotNotRachit's F-Droid Repo is a repository of apps to be used with F-Droid."}, "requests": {"install": [], "uninstall": []}, "apps": [], "packages": {}}
+{
+  "repo": {
+    "timestamp": 1752440253000,
+    "version": 20002,
+    "name": "NotNotRachit's F-Droid Repo",
+    "icon": "icon.png",
+    "address": "https://raw.githubusercontent.com/notnotrachit/fdroid/main/fdroid/repo",
+    "description": "NotNotRachit's F-Droid Repo is a repository of apps to be used with F-Droid."
+  },
+  "requests": {
+    "install": [],
+    "uninstall": []
+  },
+  "apps": [
+    {
+      "authorName": "notnotrachit",
+      "categories": [
+        "Money"
+      ],
+      "suggestedVersionName": "1.6.1",
+      "suggestedVersionCode": "1",
+      "description": "Sharepal is a simple group expense splitting app that allows users to easily split expenses among group members.\n",
+      "license": "Unknown",
+      "name": "Sharepal",
+      "sourceCode": "https://github.com/notnotrachit/sharepal_app",
+      "added": 1752440249000,
+      "packageName": "com.notnotrachit.sharepalmobile",
+      "lastUpdated": 1752440249000,
+      "localized": {
+        "en-US": {
+          "whatsNew": "Initial Release"
+        }
+      }
+    }
+  ],
+  "packages": {
+    "com.notnotrachit.sharepalmobile": [
+      {
+        "added": 1752440249000,
+        "apkName": "notality_1.apk",
+        "hash": "795702b9b61140e28da5abeb3c19d1b566b145d04e1431a0d059bac6f9ec2806",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.notnotrachit.sharepalmobile",
+        "sig": "92352a035b7ebe90afa303cb286dd984",
+        "signer": "177abcd7790847d25e69843b42a3f50d01f3327104d920d705fa144b2119f05d",
+        "size": 79915991,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.USE_BIOMETRIC",
+            null
+          ],
+          [
+            "android.permission.USE_FINGERPRINT",
+            null
+          ],
+          [
+            "com.notnotrachit.sharepalmobile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ]
+        ],
+        "versionCode": 1,
+        "versionName": "1.6.1"
+      }
+    ]
+  }
+}

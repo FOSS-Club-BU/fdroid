@@ -6,7 +6,7 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This 
 <!-- This table is auto-generated. Do not edit -->
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |
-| <a href=""><img src="fdroid/repo/icons/" alt="categories icon" width="36px" height="36px"></a> | [**categories**]() |  |  (2147483647) |
+| <a href="https://github.com/notnotrachit/sharepal_app"><img src="fdroid/repo/icons/" alt="Sharepal icon" width="36px" height="36px"></a> | [**Sharepal**](https://github.com/notnotrachit/sharepal_app) |  | 1.6.1 (1) |
 <!-- end apps table -->
 
 ### How to use
