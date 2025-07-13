@@ -1,0 +1,10 @@
+notality:
+  git: https://github.com/notnotrachit/sharepal_app
+  name: "Sharepal"
+  description: |
+    Sharepal is a simple group expense splitting app that allows users to easily split expenses among group members.
+
+  # As described on https://f-droid.org/en/docs/Build_Metadata_Reference/#Categories,
+  # you can use any name here, but you should look at the existing categories first
+  categories:
+    - Money
