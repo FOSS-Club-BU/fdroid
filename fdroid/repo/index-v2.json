@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/notnotrachit/fdroid/main/fdroid/repo",
-    "timestamp": 1752465354000,
+    "timestamp": 1752551508000,
     "categories": {
       "Money": {
         "name": {
@@ -31,6 +31,7 @@
           "Money"
         ],
         "lastUpdated": 1752440249000,
+        "license": "GPL-3.0",
         "sourceCode": "https://github.com/notnotrachit/sharepal_app",
         "authorName": "notnotrachit",
         "name": {

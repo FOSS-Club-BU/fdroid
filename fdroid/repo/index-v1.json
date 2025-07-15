@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1752465354000,
+    "timestamp": 1752551508000,
     "version": 20002,
     "name": "NotNotRachit's F-Droid Repo",
     "icon": "icon.png",
@@ -20,7 +20,7 @@
       "suggestedVersionName": "1.6.1",
       "suggestedVersionCode": "1",
       "description": "Sharepal is a simple group expense splitting app that allows users to easily split expenses among group members.\n",
-      "license": "Unknown",
+      "license": "GPL-3.0",
       "name": "Sharepal",
       "sourceCode": "https://github.com/notnotrachit/sharepal_app",
       "added": 1752440249000,
