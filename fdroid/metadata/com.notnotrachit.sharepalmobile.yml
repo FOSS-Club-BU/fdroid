@@ -5,6 +5,7 @@ CurrentVersion: 1.6.1
 CurrentVersionCode: 1
 Description: |
     Sharepal is a simple group expense splitting app that allows users to easily split expenses among group members.
+    Fully open source
 IssueTracker: ""
 License: GPL-3.0
 Name: Sharepal

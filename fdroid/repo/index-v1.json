@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1752681526000,
+    "timestamp": 1752683011000,
     "version": 20002,
     "name": "FOSS BU's Community Repo",
     "icon": "icon.png",
@@ -19,13 +19,13 @@
       ],
       "suggestedVersionName": "1.6.1",
       "suggestedVersionCode": "1",
-      "description": "Sharepal is a simple group expense splitting app that allows users to easily split expenses among group members.\n",
+      "description": "Sharepal is a simple group expense splitting app that allows users to easily split expenses among group members.\nFully open source\n",
       "license": "GPL-3.0",
       "name": "Sharepal",
       "sourceCode": "https://github.com/notnotrachit/sharepal_app",
-      "added": 1752440249000,
+      "added": 1752683000000,
       "packageName": "com.notnotrachit.sharepalmobile",
-      "lastUpdated": 1752440249000,
+      "lastUpdated": 1752683000000,
       "localized": {
         "en-US": {
           "whatsNew": "Initial Release"
@@ -36,8 +36,8 @@
   "packages": {
     "com.notnotrachit.sharepalmobile": [
       {
-        "added": 1752440249000,
-        "apkName": "notality_1.apk",
+        "added": 1752683000000,
+        "apkName": "sharepal_1.apk",
         "hash": "795702b9b61140e28da5abeb3c19d1b566b145d04e1431a0d059bac6f9ec2806",
         "hashType": "sha256",
         "minSdkVersion": 24,

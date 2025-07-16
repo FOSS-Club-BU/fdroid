@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1752683011000
+  },
+  "packages": {
+    "com.notnotrachit.sharepalmobile": {
+      "metadata": {
+        "description": {
+          "en-US": "Sharepal is a simple group expense splitting app that allows users to easily split expenses among group members.\nFully open source\n"
+        }
+      }
+    }
+  }
+}
