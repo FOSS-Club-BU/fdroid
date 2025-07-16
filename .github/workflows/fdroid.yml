@@ -38,6 +38,10 @@ jobs:
         name: Set up Go
         with:
           go-version: '^1.17.0' 
+
+
+      - name: Restore custom repo icon
+        run: cp .github/icon.png fdroid/repo/icons/icon.png
         
       - name: Run update script
         run: bash update.sh 2>&1
