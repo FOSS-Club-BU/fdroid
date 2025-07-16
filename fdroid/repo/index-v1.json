@@ -1,11 +1,11 @@
 {
   "repo": {
-    "timestamp": 1752637799000,
+    "timestamp": 1752677000000,
     "version": 20002,
-    "name": "NotNotRachit's F-Droid Repo",
+    "name": "FOSS BU's Community Repo",
     "icon": "icon.png",
-    "address": "https://raw.githubusercontent.com/notnotrachit/fdroid/main/fdroid/repo",
-    "description": "NotNotRachit's F-Droid Repo is a repository of apps to be used with F-Droid."
+    "address": "https://raw.githubusercontent.com/FOSS-Club-BU/fdroid/main/fdroid/repo",
+    "description": "FOSS BU's Community Repo. This is a repository of the FOSS Club BU Community. Anyone can submit their apps to this repo."
   },
   "requests": {
     "install": [],

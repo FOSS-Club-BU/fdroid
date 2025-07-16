@@ -1,20 +1,20 @@
 {
   "repo": {
     "name": {
-      "en-US": "NotNotRachit's F-Droid Repo"
+      "en-US": "FOSS BU's Community Repo"
     },
     "description": {
-      "en-US": "NotNotRachit's F-Droid Repo is a repository of apps to be used with F-Droid."
+      "en-US": "FOSS BU's Community Repo. This is a repository of the FOSS Club BU Community. Anyone can submit their apps to this repo."
     },
     "icon": {
       "en-US": {
         "name": "/icons/icon.png",
-        "sha256": "eee0188c28566f0fec3b888b093abf125def75b7e2c7c3c0628681cb216fa871",
-        "size": 930
+        "sha256": "88ca54de881654f7796e1f07dff57c68917ef6adc1b7faae8e568cb54e125465",
+        "size": 985
       }
     },
-    "address": "https://raw.githubusercontent.com/notnotrachit/fdroid/main/fdroid/repo",
-    "timestamp": 1752637799000,
+    "address": "https://raw.githubusercontent.com/FOSS-Club-BU/fdroid/main/fdroid/repo",
+    "timestamp": 1752677000000,
     "categories": {
       "Money": {
         "name": {
