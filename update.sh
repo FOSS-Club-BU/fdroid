@@ -24,7 +24,7 @@ elif [ $EXIT_CODE -eq 0 ]; then
 
     git config --global user.name 'github-actions'
     git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
+    cp .github/icon.png fdroid/repo/icons/icon.png
     git add .
     git commit -m "Automated update"
     git push "https://x-access-token:${GH_ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
