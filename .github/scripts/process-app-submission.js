@@ -183,8 +183,9 @@ class AppSubmissionProcessor {
   async createPullRequest(data, yamlEntry) {
     const branchName = `add-app-${data.appId}-${Date.now()}`;
     
-    // Get current apps.yaml content
+    // Get current apps.yaml content and SHA
     let appsYamlContent = '';
+    let appsYamlSha = null;
     try {
       const { data: fileData } = await this.github.rest.repos.getContent({
         owner: this.context.repo.owner,
@@ -192,18 +193,23 @@ class AppSubmissionProcessor {
         path: 'apps.yaml'
       });
       appsYamlContent = Buffer.from(fileData.content, 'base64').toString();
+      appsYamlSha = fileData.sha;
     } catch (error) {
       console.log('Could not fetch apps.yaml:', error);
+      // If apps.yaml doesn't exist, we'll create it
+      appsYamlContent = '';
+      appsYamlSha = null;
     }
     
     // Append new app to apps.yaml
     const newAppsYamlContent = appsYamlContent + '\n' + yamlEntry;
     
-    // Get the default branch SHA
+    // Get the default branch info
+    const defaultBranchName = this.context.payload.repository.default_branch || 'main';
     const { data: defaultBranch } = await this.github.rest.repos.getBranch({
       owner: this.context.repo.owner,
       repo: this.context.repo.repo,
-      branch: this.context.payload.repository.default_branch
+      branch: defaultBranchName
     });
     
     // Create new branch
@@ -215,12 +221,12 @@ class AppSubmissionProcessor {
     });
     
     // Update apps.yaml in the new branch
-    await this.github.rest.repos.createOrUpdateFileContents({
+    const updateParams = {
       owner: this.context.repo.owner,
       repo: this.context.repo.repo,
       path: 'apps.yaml',
       message: `Add ${data.appName} (${data.appId}) to F-Droid repository
-      
+
 Automatically generated from issue #${this.issue.number}
 
 App details:
@@ -229,7 +235,14 @@ App details:
 - Categories: ${data.categories.join(', ')}`,
       content: Buffer.from(newAppsYamlContent).toString('base64'),
       branch: branchName
-    });
+    };
+    
+    // Add SHA if file exists (for updates)
+    if (appsYamlSha) {
+      updateParams.sha = appsYamlSha;
+    }
+    
+    await this.github.rest.repos.createOrUpdateFileContents(updateParams);
     
     // Create pull request
     const { data: pr } = await this.github.rest.pulls.create({
@@ -237,7 +250,7 @@ App details:
       repo: this.context.repo.repo,
       title: `Add ${data.appName} to F-Droid repository`,
       head: branchName,
-      base: this.context.payload.repository.default_branch,
+      base: defaultBranchName,
       body: this.generatePRDescription(data)
     });
     
@@ -248,7 +261,7 @@ App details:
    * Generate PR description
    */
   generatePRDescription(data) {
-    let description = `## 📱 New App Submission: ${data.appName}
+    let description = `## New App Submission: ${data.appName}
 
 This PR was automatically generated from issue #${this.issue.number}.
 
@@ -302,7 +315,7 @@ This PR was automatically generated from issue #${this.issue.number}.
       owner: this.context.repo.owner,
       repo: this.context.repo.repo,
       issue_number: this.issue.number,
-      body: `🎉 **Submission Processed Successfully!**
+      body: `Submission Processed Successfully!
       
 Your app submission has been processed and a Pull Request has been created: #${prNumber}
 
@@ -313,7 +326,7 @@ Your app submission has been processed and a Pull Request has been created: #${p
 
 You can track the progress in PR #${prNumber}.
 
-Thank you for contributing to the FOSS BU Community! 🚀`
+Thank you for contributing to the FOSS BU Community!`
     });
   }
 
@@ -340,7 +353,7 @@ Thank you for contributing to the FOSS BU Community! 🚀`
       // Validate data
       const errors = this.validateData(data);
       if (errors.length > 0) {
-        await this.commentError(`❌ **Submission Error**
+        await this.commentError(`Submission Error
 
 Some required fields are missing or invalid:
 ${errors.map(error => `- ${error}`).join('\n')}
@@ -352,7 +365,7 @@ Please edit your issue to provide all required information.`);
       // Check for duplicates
       const isDuplicate = await this.checkForDuplicate(data.appId);
       if (isDuplicate) {
-        await this.commentError(`❌ **App Already Exists**
+        await this.commentError(`App Already Exists
 
 An app with the ID "${data.appId}" already exists in the repository.
 Please choose a different App ID or check if this is a duplicate submission.`);
@@ -371,7 +384,7 @@ Please choose a different App ID or check if this is a duplicate submission.`);
       
     } catch (error) {
       console.error('Error processing submission:', error);
-      await this.commentError(`❌ **Processing Error**
+      await this.commentError(`Processing Error
 
 An error occurred while processing your submission. Please try again or contact the maintainers.
 
