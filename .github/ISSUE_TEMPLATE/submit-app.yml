@@ -1,0 +1,155 @@
+name: 📱 Submit New App
+description: Submit your FOSS Android app to the FOSS BU Community F-Droid repository
+title: "[APP SUBMISSION] "
+labels: ["app-submission"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Submit Your FOSS Android App 🚀
+        
+        Thank you for contributing to the FOSS BU Community F-Droid repository! 
+        
+        **Before submitting:**
+        - ✅ Your app must be Free and Open Source Software (FOSS)
+        - ✅ Your GitHub repository must have published releases with APK files as assets
+        - ✅ Make sure your app builds and works properly
+        
+        Fill out the form below and we'll automatically create a Pull Request for you!
+
+  - type: input
+    id: app_id
+    attributes:
+      label: App ID
+      description: A unique identifier for your app (usually package name or short identifier, e.g., "com.example.myapp" or "myapp")
+      placeholder: com.example.myapp
+    validations:
+      required: true
+
+  - type: input
+    id: git_url
+    attributes:
+      label: GitHub Repository URL
+      description: The GitHub repository URL where your app's source code is hosted
+      placeholder: https://github.com/username/repository
+    validations:
+      required: true
+
+  - type: input
+    id: app_name
+    attributes:
+      label: App Name
+      description: The display name of your app
+      placeholder: My Awesome App
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: App Description
+      description: A detailed description of your app. You can use multiple lines and basic HTML formatting.
+      placeholder: |
+        A brief description of what your app does.
+        
+        **Features:**
+        - Feature 1
+        - Feature 2
+        - Feature 3
+        
+        You can include more details about functionality, target audience, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Categories
+      description: Select the categories that best describe your app (you can select multiple)
+      multiple: true
+      options:
+        - Connectivity
+        - Development
+        - Games
+        - Graphics
+        - Internet
+        - Money
+        - Multimedia
+        - Navigation
+        - Phone & SMS
+        - Reading
+        - Science & Education
+        - Security
+        - Sports & Health
+        - System
+        - Theming
+        - Time
+        - Writing
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author Name (Optional)
+      description: Your name or organization name
+      placeholder: John Doe
+
+  - type: input
+    id: license
+    attributes:
+      label: License (Optional)
+      description: SPDX license identifier (e.g., GPL-3.0, MIT, Apache-2.0)
+      placeholder: GPL-3.0
+
+  - type: input
+    id: website
+    attributes:
+      label: Website (Optional)
+      description: Official website for your app
+      placeholder: https://myapp.example.com
+
+  - type: input
+    id: tracker
+    attributes:
+      label: Issue Tracker (Optional)
+      description: URL to your app's issue tracker
+      placeholder: https://github.com/username/repository/issues
+
+  - type: textarea
+    id: anti_features
+    attributes:
+      label: Anti-Features (Optional)
+      description: List any anti-features your app might have (one per line). See https://f-droid.org/en/docs/Anti-Features/
+      placeholder: |
+        NonFreeNet
+        Tracking
+
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Requirements Checklist
+      description: Please confirm the following requirements
+      options:
+        - label: My app is Free and Open Source Software (FOSS)
+          required: true
+        - label: My GitHub repository has published releases with APK files
+          required: true
+        - label: I have the right to submit this app to this repository
+          required: true
+        - label: The app information provided above is accurate
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        **What happens next?**
+        1. 🤖 Our automation will create a Pull Request with your app details
+        2. 🔍 Maintainers will review your submission
+        3. ✅ Once approved, your app will be available in the F-Droid repository!
+        
+        Thank you for contributing to the FOSS community! 🎉

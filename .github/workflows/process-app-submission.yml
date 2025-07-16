@@ -1,0 +1,24 @@
+name: Process App Submission
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  process-submission:
+    if: contains(github.event.issue.labels.*.name, 'app-submission')
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Parse issue and create PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const processSubmission = require('./.github/scripts/process-app-submission.js');
+            await processSubmission({ github, context });

@@ -34,8 +34,15 @@ Please note that some apps published here might contain [Anti-Features](https://
 
 ### Community: Submit Your App!
 
-Want your app listed here? It's easy:
+Want your app listed here? We have two easy ways:
 
+#### Quick Submission (Recommended)
+1. [Create a new issue](../../issues/new/choose) using our "Submit New App" template
+2. Fill out the form with your app details
+3. Our automation will create a Pull Request for you!
+4. Once approved, your app will be published in this community repo!
+
+#### Manual Submission
 1. Fork this repository.
 2. Add your app's metadata (see the [SUBMIT.md](SUBMIT.md) guide for details).
 3. Open a Pull Request with your changes.
