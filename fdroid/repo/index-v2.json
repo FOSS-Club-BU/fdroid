@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FOSS-Club-BU/fdroid/main/fdroid/repo",
-    "timestamp": 1752686804000,
+    "timestamp": 1752700278000,
     "categories": {
       "Money": {
         "name": {
@@ -30,7 +30,7 @@
         "categories": [
           "Money"
         ],
-        "lastUpdated": 1752683000000,
+        "lastUpdated": 1752700267000,
         "license": "GPL-3.0",
         "sourceCode": "https://github.com/notnotrachit/sharepal_app",
         "authorName": "notnotrachit",
@@ -43,6 +43,71 @@
         "preferredSigner": "177abcd7790847d25e69843b42a3f50d01f3327104d920d705fa144b2119f05d"
       },
       "versions": {
+        "180d08ee3213fd7dadd3fc6abab9a4694b4142b4877fd2741952c910b2a77f5d": {
+          "added": 1752700267000,
+          "file": {
+            "name": "/sharepal_1.7.apk",
+            "sha256": "180d08ee3213fd7dadd3fc6abab9a4694b4142b4877fd2741952c910b2a77f5d",
+            "size": 79972079
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.6.1",
+            "versionCode": 1,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 35
+            },
+            "signer": {
+              "sha256": [
+                "177abcd7790847d25e69843b42a3f50d01f3327104d920d705fa144b2119f05d"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.RECORD_AUDIO"
+              },
+              {
+                "name": "android.permission.SYSTEM_ALERT_WINDOW"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              },
+              {
+                "name": "android.permission.USE_BIOMETRIC"
+              },
+              {
+                "name": "android.permission.USE_FINGERPRINT"
+              },
+              {
+                "name": "com.notnotrachit.sharepalmobile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              }
+            ]
+          }
+        },
         "795702b9b61140e28da5abeb3c19d1b566b145d04e1431a0d059bac6f9ec2806": {
           "added": 1752683000000,
           "file": {

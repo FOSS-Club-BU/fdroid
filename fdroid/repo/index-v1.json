@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1752686804000,
+    "timestamp": 1752700278000,
     "version": 20002,
     "name": "FOSS BU's Community Repo",
     "icon": "icon.png",
@@ -25,7 +25,7 @@
       "sourceCode": "https://github.com/notnotrachit/sharepal_app",
       "added": 1752683000000,
       "packageName": "com.notnotrachit.sharepalmobile",
-      "lastUpdated": 1752683000000,
+      "lastUpdated": 1752700267000,
       "localized": {
         "en-US": {
           "whatsNew": "Initial Release"
@@ -35,6 +35,76 @@
   ],
   "packages": {
     "com.notnotrachit.sharepalmobile": [
+      {
+        "added": 1752700267000,
+        "apkName": "sharepal_1.7.apk",
+        "hash": "180d08ee3213fd7dadd3fc6abab9a4694b4142b4877fd2741952c910b2a77f5d",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.notnotrachit.sharepalmobile",
+        "sig": "92352a035b7ebe90afa303cb286dd984",
+        "signer": "177abcd7790847d25e69843b42a3f50d01f3327104d920d705fa144b2119f05d",
+        "size": 79972079,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.USE_BIOMETRIC",
+            null
+          ],
+          [
+            "android.permission.USE_FINGERPRINT",
+            null
+          ],
+          [
+            "com.notnotrachit.sharepalmobile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ]
+        ],
+        "versionCode": 1,
+        "versionName": "1.6.1"
+      },
       {
         "added": 1752683000000,
         "apkName": "sharepal_1.apk",
