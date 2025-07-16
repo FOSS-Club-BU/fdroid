@@ -9,3 +9,11 @@ sharepal:
   # you can use any name here, but you should look at the existing categories first
   categories:
     - Money
+
+com.test.com:
+  git: https://github.com/FOSS-Club-BU/fdroid
+  name: "Test"
+  description: |
+    cdv
+  categories:
+    - Development
